@@ -32,7 +32,6 @@ body * {
 
 header {    
     margin: 0 0 7.7rem;
-
     height: 4.8rem;
 }
 
@@ -267,5 +266,102 @@ td .remove {
     color: #ff2a3c;
 }
 
+/* Styles for mobile devices */
+@media only screen and (max-width: 844px) {
+    /* CSS rules go here */
+    #app {
+        margin: 2rem; /* Reduce margin for smaller screens */
+    }
 
+    header {
+        margin: 0 0 1rem; /* Reduce header bottom margin */
+        height: auto; /* Allow header height to adjust based on content */
+        padding: 0.5rem; /* Add some padding for better spacing */
+    }
+
+    nav {
+        gap: 1rem;
+    }
+
+    header img {
+        max-width: 8rem;
+    }
+
+    td.user img {
+        width: 2rem;
+        height: 2rem;
+    
+        object-fit: cover;
+        border-radius: 50%;
+    }
+
+    td.user .user-details a span{
+        font-size: 70%;
+    }
+
+    th {
+        font-size: smaller;
+    }
+
+    button.remove {
+        font-size: small;
+    }
+
+    td.repositories {
+        text-align: center;
+    }
+
+    .search {
+        width: 65vw;
+        height: 8vh;
+        gap: 1rem;
+        padding: 0;
+    }
+
+    .search input {
+        padding: .5rem;
+        font-size: small;
+    }
+
+    .search button {
+        width: 1rem;
+        padding-left: 1rem;
+        padding-right: 3.5rem;
+        display: flex;
+        align-items: center;
+    }
+
+    button p {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        white-space: nowrap;
+        border-width: 0;
+        clip: rect(0,0,0,0);
+    }
+
+    .empty-table-message {
+        position: absolute;
+        top: 30rem;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        gap: 6rem;
+        padding: 0 8rem 0 8rem;
+    }
+
+    .empty-table-message img {
+        height: 10rem;
+    }
+
+}   
+
+/* @media screen and (min-width: 844px) and (max-width: 1000px) {
+    
+} */
 
